@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <title>Document</title>
+      <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        body{
+            width: 100%;
+            height: 1080px;
+            background-image: linear-gradient(rgb(60, 6, 49),rgb(251, 25, 251));
+            background-repeat: no-repeat;
+        }
+        #container{
+            background-color: rgba(240, 248, 255, 0.316);
+            width:20%;
+            height:250px;
+            position:relative;
+            left:500px;
+            top:150px;
+            border-radius: 10px;
+            z-index: 5;
+            
+        }
+        #a{
+            display:inline-block;
+            position:absolute;
+            font-size: 130px;
+            left:250px;
+           top:250px;
+           right:200px;
+            color:rgba(255, 255, 255, 0.51);
+            /* box-shadow:2px 2px 4px rgba(218, 0, 189, 0.845); */
+        }
+        input{
+            width:30px;
+            box-shadow: 2px 2px 5px black; 
+             color:rgb(138, 20, 126); 
+            background-color: rgb(80, 15, 78); 
+        }
+        #b{
+            width: 270px;
+            margin-left: 20px;
+            margin-top: 10px;
+            height:30px;
+            color: rgb(56, 6, 57);
+            background-color: rgb(152, 42, 174);
+            border: none;
+        }
+        input:hover{
+            color: rgba(16, 2, 13, 0.953);
+            background-color: rgba(223, 51, 212, 0.986);
+
+        }
+        .r{
+            width: 50px;
+            position: relative;
+            margin-left:20px;
+            border-radius: 10px;
+        }
+        .s{
+            width: 125px;
+            position: relative;
+            margin-left:20px;
+            border-radius: 10px;
+            z-index: 5px;
+        }
+      </style>
+</head>
+<body>
+    <h1 id="a">calculator</h1> 
+  <div id="container">
+   
+    <form name="cform">
+        <input id="b" type="text" name="answer">
+        <br><br>
+        <input class="r" type="button" value="1" onclick="cform.answer.value +='1'">
+        <input class="r" type="button" value="2" onclick="cform.answer.value +='2'">
+        <input class="r" type="button" value="3" onclick="cform.answer.value +='3'">
+        <input class="r" type="button" value="+" onclick="cform.answer.value +='+'">
+        <br><br>
+        <input class="r" type="button" value="4" onclick="cform.answer.value +='4'">
+        <input class="r" type="button" value="5" onclick="cform.answer.value +='5'">
+        <input class="r" type="button" value="6" onclick="cform.answer.value +='6'">
+        <input class="r" type="button" value="-" onclick="cform.answer.value +='-'">
+        <br><br>
+        <input class="r" type="button" value="7" onclick="cform.answer.value +='7'">
+        <input class="r" type="button" value="8" onclick="cform.answer.value +='8'">
+        <input class="r" type="button" value="9" onclick="cform.answer.value +='9'">
+        <input class="r" type="button" value="*" onclick="cform.answer.value +='*'">
+        <br><br>
+        <input class="r" type="button" value="/" onclick="cform.answer.value +='/'">
+        <input class="r" type="button" value="0" onclick="cform.answer.value +='0'">
+        <input class="r" type="button" value="." onclick="cform.answer.value +='.'">
+        <input class="r" type="button" value="%" onclick="cform.answer.value +='%'">
+        <br><br>
+        <input class="s" type="button" value="clear" onclick="cform.answer.value =' '">
+        <input class="s" type="button" value=" = " onclick="cform.answer.value=eval(cform.answer.value)">
+
+    </form>
+
+
+  </div>  
+</body>
+</html>
